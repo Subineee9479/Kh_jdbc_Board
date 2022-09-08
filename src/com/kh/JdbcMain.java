@@ -15,19 +15,21 @@ public class JdbcMain {
         try {
             conn = Common.getConnection();
             stmt = conn.createStatement();
-            String sql = "SELECT * from EMP";
+            String sql = "SELECT * FROM MEMBER";
             rs = stmt.executeQuery(sql);
 
             System.out.println(rs);
             while (rs.next()) {
-                System.out.print(rs.getInt("EMPNO") + " ");
-                System.out.print(rs.getString("ENAME") + " ");
-                System.out.print(rs.getString("JOB") + " ");
-                System.out.print(rs.getInt("MGR") + " ");
-                System.out.print(rs.getDate("HIREDATE") + " ");
-                System.out.print(rs.getInt("SAL") + " ");
-                System.out.print(rs.getInt("COMM") + " ");
-                System.out.print(rs.getInt("DEPTNO") + " ");
+                System.out.print(rs.getInt("MEMBER_NUM") + " ");
+                System.out.print(rs.getString("ID") + " ");
+                System.out.print(rs.getString("PASSWORD") + " ");
+                System.out.print(rs.getString("NAME") + " ");
+                System.out.print(rs.getDate("BIRTH") + " ");
+                System.out.print(rs.getString("GENDER") + " ");
+                System.out.print(rs.getString("EMAIL") + " ");
+                System.out.print(rs.getString("PHONE") + " ");
+                System.out.print(rs.getString("RECOMMENDER_ID") + " ");
+                System.out.print(rs.getDate("REG_DATE") + " ");
             }
         } catch(Exception e){
                 e.printStackTrace();
