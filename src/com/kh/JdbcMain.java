@@ -1,5 +1,5 @@
 package com.kh;
-
+// member
 import com.kh.util.Common;
 
 import java.sql.Connection;
